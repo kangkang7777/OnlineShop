@@ -1,6 +1,10 @@
-.gray-box { background-color: #f5f5f5; }
-.flash-sale { margin: 0 0 -16px -16px; }
+/*区域*/
+.container{background-color: #f5f5f5}
+.wrapper { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 1200px; margin-left: auto; margin-right: auto; }
 .flash-sale-section { padding-bottom: 50px; }
+
+
+.flash-sale { margin: 0 0 -16px -16px; }
 .flash-sale .grid { position: relative; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0 0 16px 16px; overflow: hidden; line-height: 22px; background-color: #fff; }
 .flash-sale .grid-b { width: 592px; height: 396px; background: transparent; }
 .flash-sale .grid-b img { display: block; -webkit-transition: transform 0.5s; transition: transform 0.5s; -webkit-perspective: 1000; perspective: 1000; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
@@ -16,19 +20,22 @@
 .flash-sale .stit { color: #666; }
 .flash-sale .info { color: #ff4d4d; }
 
-.header { position: relative; height: 68px; z-index: 110; }
-.header .logo { float: left; margin-top: 22px; }
-
-/*.nav { position: relative; height: 48px; line-height: 44px; }*/
-/*.nav-box { background-color: #fff; border-bottom: 2px solid #f52f3e; }*/
-/*.nav-ul { float: left; }*/
-/*.nav-ul > li { float: left; }*/
-/*.nav-ul > li > a { padding: 0 32px; display: block; font-size: 16px; }*/
-/*.nav-ul > li > a:hover { color: #f52f3e; }*/
 
 .home-full-banner { position: relative; height: 480px; }
 .home-full-banner .item { position: relative; display: block; height: 480px; -webkit-transform: translateZ(0); transform: translateZ(0); }
 .home-full-banner .item img { position: absolute; top: 0; left: 50%; margin-left: -960px; width: 1920px; height: 480px; }
 
-.section-hd { position: relative; margin: 35px 0 15px; height: 44px; line-height: 44px; }
-.section-hd .title { padding-left: 4px; font-size: 24px; }
+/*顶部*/
+.top {font-size: 12px;height: 40px}
+.top .logo {float:left;}
+.top .logo a{font-family: Chalkboard, serif;font-size: large;color: #333333}
+.top .user {float:right;}
+.top .user a{font-family: Chalkboard, serif;font-size: large;color: #333333}
+
+/*图片*/
+.image {width: 1200px;margin: auto;}
+.image img{width: 1200px;}
+
+/*占位*/
+.section { position: relative; height: 44px; line-height: 44px; }
+
