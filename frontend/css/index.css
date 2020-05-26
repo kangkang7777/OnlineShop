@@ -2,19 +2,12 @@
 .container{background-color: #f5f5f5}
 .wrapper { width: 1200px;margin: auto;height: 700px}
 
-/*顶部*/
-.top {font-size: 12px;height: 40px}
-.top .logo {float:left;}
-.top .logo a{font-family: Chalkboard, serif;font-size: large;color: #333333}
-.top .user {float:right;}
-.top .user a{font-family: Chalkboard, serif;font-size: large;color: #333333}
-
 /*图片*/
 .image {width: 1200px;margin: auto;}
 .image img{width: 1200px;}
 
 /*占位*/
-.section { position: relative; height: 44px; line-height: 44px; }
+.section { position: relative; height: 44px}
 
 /*商品*/
 .product { margin: 0 0 -16px -16px; }

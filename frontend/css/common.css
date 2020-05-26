@@ -1,0 +1,9 @@
+body { min-width: 1260px; font-size: 14px; line-height: 1.715; font-family: "Helvetica Neue", Helvetica, STHeiTi, "Microsoft YaHei", "微软雅黑", SimSun, sans-serif; color: #666; }
+a {  text-decoration:none;}
+
+/*顶部*/
+.top {font-size: 12px;height: 40px}
+.top .logo {float:left;}
+.top .logo a{font-family: Chalkboard, serif;font-size: large;color: #333333}
+.top .user {float:right;}
+.top .user a{font-family: Chalkboard, serif;font-size: large;color: #333333}
