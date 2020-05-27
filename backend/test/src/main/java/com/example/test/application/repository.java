@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 public interface repository{
+    User getUserByAccountAndPassword(String account,String password);
     User getUserByAccount(String account);
     void addUser(String account, String password);
     void addCart(String account,int num);

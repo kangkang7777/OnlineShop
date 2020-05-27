@@ -46,9 +46,9 @@ public class application {
         return Repository.getOrder(account);
     }
 
-    public boolean getUser(String account)
+    public boolean getUser(String account,String password)
     {
-        return Repository.getUserByAccount(account) != null;
+        return Repository.getUserByAccountAndPassword(account,password) != null;
     }
 
 }

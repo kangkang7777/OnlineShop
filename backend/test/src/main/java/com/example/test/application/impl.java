@@ -18,6 +18,11 @@ public class impl implements repository {
     private repositor Repositor;
 
     @Override
+    public User getUserByAccountAndPassword(String account, String password) {
+        return Repositor.findUserByAccountAndPassword(account,password);
+    }
+
+    @Override
     public User getUserByAccount(String account) {
         return Repositor.findUserByAccount(account);
     }

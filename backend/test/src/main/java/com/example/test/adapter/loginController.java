@@ -30,6 +30,6 @@ public class loginController {
     @GetMapping
     public boolean check(@RequestParam String account, @RequestParam String password)
     {
-        return usersApplication.getUser(account);
+        return usersApplication.getUser(account,password);
     }
 }
