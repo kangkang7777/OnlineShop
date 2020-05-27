@@ -10,5 +10,6 @@ public interface repository{
     void addUser(String account, String password);
     void addCart(String account,int num);
     void checkOut(String account);
+    List<Integer> getCart(String account);
     List<List<Integer>> getOrder(String account);
 }

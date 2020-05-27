@@ -1,0 +1,27 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.order-container {
+    background-color: gainsboro;
+    height: 700px;
+    width: 80%;
+    border: 5px solid darkgray;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.goods-container
+{
+    background-color: whitesmoke;
+    height: 65px;
+    width: 85%;
+    border: 2px solid darkgray;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+}

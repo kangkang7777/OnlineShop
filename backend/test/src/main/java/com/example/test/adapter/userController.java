@@ -17,7 +17,7 @@ public class userController {
         this.usersApplication = usersApplication;
     }
 
-    @PostMapping("/checkOut")
+    @PostMapping("/pay")
     public boolean checkOut(@RequestParam String account)
     {
         return usersApplication.checkOut(account);
@@ -33,6 +33,12 @@ public class userController {
     public List<List<Integer>> getOrder(@RequestParam String account)
     {
         return usersApplication.getOrder(account);
+    }
+
+    @PostMapping("/getCart")
+    public List<Integer> getCart(@RequestParam String account)
+    {
+        return usersApplication.getCart(account);
     }
 
 }

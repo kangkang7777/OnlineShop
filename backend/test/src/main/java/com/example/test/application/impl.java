@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Component
@@ -46,10 +47,18 @@ public class impl implements repository {
     @Override
     public void checkOut(String account) {
         User u = Repositor.findUserByAccount(account);
-        List<List<Integer>> temp = u.getOrder();
-        temp.add(u.getCart());
-        u.setOrder(temp);
+        List<Integer> tempCart = new ArrayList<>(Arrays.asList(0,0,0,0,0,0,0));
+        List<List<Integer>> tempOrder = u.getOrder();
+        if(u.getCart()!=tempCart)
+            tempOrder.add(u.getCart());
+        u.setOrder(tempOrder);
+        u.setCart(tempCart);
         Repositor.save(u);
+    }
+
+    @Override
+    public List<Integer> getCart(String account) {
+        return Repositor.findUserByAccount(account).getCart();
     }
 
     @Override

@@ -18,7 +18,6 @@ function addCart(num)
 {
     if(getCookie()>5)
     {
-
         let xhr=new XMLHttpRequest();
         let url = "http://127.0.0.1:8086/user/addCart";
         let data = "account=";

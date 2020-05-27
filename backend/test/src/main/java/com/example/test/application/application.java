@@ -24,6 +24,11 @@ public class application {
         return true;
     }
 
+    public List<Integer> getCart(String account)
+    {
+        return Repository.getCart(account);
+    }
+
     public boolean addCart(String account,int num)
     {
         Repository.addCart(account,num);
