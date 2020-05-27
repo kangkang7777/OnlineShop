@@ -27,11 +27,9 @@ public class loginController {
 //            return map;
 //        }
 //    }
-    @PostMapping
+    @GetMapping
     public boolean check(@RequestParam String account, @RequestParam String password)
     {
         return usersApplication.getUser(account);
     }
-
-
 }

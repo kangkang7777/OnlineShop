@@ -3,9 +3,7 @@ let login = document.getElementById("login");
 let register = document.getElementById("register");
 
 login.addEventListener('click',function(){
-    let data;
-    data.append(document.getElementById("account").value);
-    data.append(document.getElementById("password").value);
+    let data = "account="+document.getElementById("account").value+"&password="+document.getElementById("password").value;
     getLogin(data);
 },false)
 
@@ -17,16 +15,24 @@ register.addEventListener('click',function(){
 function postResister(data)
 {
     let xhr=new XMLHttpRequest();
-    let url = "127.0.0.1:8081/register";
+    let url = "http://127.0.0.1:8086/register";
     xhr.onreadystatechange=function()
     {
-        if (xhr.readyState===4 && xhr===200)
+        if (xhr.readyState===4)
         {
-            setCookie(data.get("account"));
-        }
-        else
-        {
-            alert("注册失败");
+            if(xhr.response === "true") {
+                let account = "";
+                for(let i = 8;i<data.length;i++)
+                {
+                    if(data[i] === "&")
+                        break;
+                    account+=data[i];
+                }
+                setCookie(account);
+                alert("注册成功");
+            }
+            else
+                alert("注册失败");
         }
     }
     xhr.open("POST",url+"?"+data,true);
@@ -35,17 +41,25 @@ function postResister(data)
 
 function getLogin(data) {
     let xhr=new XMLHttpRequest();
-    let url = "";
+    let url = "http://127.0.0.1:8086/login";
     xhr.onreadystatechange=function()
     {
-        if (xhr.readyState===4 && xhr===200)
+        if (xhr.readyState===4)
         {
-            setCookie(data.get("account"));
-            // document.getElementById("myDiv").innerHTML=xhr.responseText;
-        }
-        else
-        {
-            alert("登录失败");
+            if(xhr.response === "true") {
+                let account = "";
+                for(let i = 8;i<data.length;i++)
+                {
+                    if(data[i] === "&")
+                        break;
+                    account+=data[i];
+                }
+                setCookie(account);
+                alert("登录成功");
+                window.location.href = "index.html";
+            }
+            else
+                alert("登录失败");
         }
     }
     xhr.open("GET",url+"?"+data,true);

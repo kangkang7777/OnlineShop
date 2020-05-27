@@ -21,7 +21,7 @@ public class User {
         order = new ArrayList<>();
 
         for(int i =0;i<7;i++)
-            cart.set(i,0);
+            cart.add(0);
     }
 
     public String getId() {
