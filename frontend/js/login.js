@@ -15,7 +15,7 @@ register.addEventListener('click',function(){
 function postResister(data)
 {
     let xhr=new XMLHttpRequest();
-    let url = "http://127.0.0.1:8086/register";
+    let url = "http://129.28.167.191:8081/register";
     xhr.onreadystatechange=function()
     {
         if (xhr.readyState===4)
@@ -42,7 +42,7 @@ function postResister(data)
 
 function getLogin(data) {
     let xhr=new XMLHttpRequest();
-    let url = "http://127.0.0.1:8086/login";
+    let url = "http://129.28.167.191:8081/login";
     xhr.onreadystatechange=function()
     {
         if (xhr.readyState===4)

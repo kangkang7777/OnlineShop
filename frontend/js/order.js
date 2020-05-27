@@ -14,7 +14,7 @@ next.addEventListener('click',function(){
 
 function getOrder() {
     let xhr=new XMLHttpRequest();
-    let url = "http://127.0.0.1:8086/user/getOrder";
+    let url = "http://129.28.167.191:8081/user/getOrder";
     let data = "account=";
     for(let i = 5;i<document.cookie.length;i++)
         data+=document.cookie[i];
@@ -27,7 +27,7 @@ function getOrder() {
                 arr[0] = arr[0].replace("[[", "");
                 arr[arr.length - 1] = arr[arr.length - 1].replace("]]", "");
                 Array = arr;
-                if(arr!=='[]')
+                if(arr[0]!=="[]")
                     showOrder(arr);
             }
             else

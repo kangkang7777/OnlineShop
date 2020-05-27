@@ -15,7 +15,7 @@ pay.addEventListener('click',function(){
 function getCart()
 {
     let xhr=new XMLHttpRequest();
-    let url = "http://127.0.0.1:8086/user/getCart";
+    let url = "http://129.28.167.191:8081/user/getCart";
     let data = "account=";
     for(let i = 5;i<document.cookie.length;i++)
         data+=document.cookie[i];
@@ -42,7 +42,7 @@ function payment() {
     }
     else {
         let xhr = new XMLHttpRequest();
-        let url = "http://127.0.0.1:8086/user/pay";
+        let url = "http://129.28.167.191:8081/user/pay";
         let data = "account=";
         for (let i = 5; i < document.cookie.length; i++)
             data += document.cookie[i];
