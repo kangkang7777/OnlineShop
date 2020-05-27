@@ -5,7 +5,7 @@
 
 .order-container {
     background-color: gainsboro;
-    height: 700px;
+    height: 650px;
     width: 80%;
     border: 5px solid darkgray;
     border-radius: 25px;
@@ -17,11 +17,26 @@
 .goods-container
 {
     background-color: whitesmoke;
-    height: 65px;
+    height: 80px;
     width: 85%;
     border: 2px solid darkgray;
     border-radius: 15px;
     padding: 10px;
     margin: 10px auto;
     text-align: center;
+    font-size: 21px;
+}
+
+.order-container button
+{
+    width: 150px;
+    height: 50px;
+    border-width: 0;
+    border-radius: 3px;
+    background-color: #666666;
+    cursor: pointer;
+    font-family: Chalkboard, serif;
+    color: white;
+    font-size: 24px;
+    margin: 10px auto;
 }

@@ -49,11 +49,22 @@ public class impl implements repository {
         User u = Repositor.findUserByAccount(account);
         List<Integer> tempCart = new ArrayList<>(Arrays.asList(0,0,0,0,0,0,0));
         List<List<Integer>> tempOrder = u.getOrder();
-        if(u.getCart()!=tempCart)
+        boolean flag = false;
+        for(int i =0;i<7;i++)
+        {
+            if(u.getCart().get(i)!=0)
+            {
+                flag=true;
+                break;
+            }
+        }
+        if(flag)
+        {
             tempOrder.add(u.getCart());
-        u.setOrder(tempOrder);
-        u.setCart(tempCart);
-        Repositor.save(u);
+            u.setOrder(tempOrder);
+            u.setCart(tempCart);
+            Repositor.save(u);
+        }
     }
 
     @Override

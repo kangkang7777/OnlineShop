@@ -1,3 +1,4 @@
+let Price = 0;
 isLogin();
 getCart();
 
@@ -35,25 +36,28 @@ function getCart()
 }
 
 function payment() {
-    let xhr=new XMLHttpRequest();
-    let url = "http://127.0.0.1:8086/user/pay";
-    let data = "account=";
-    for(let i = 5;i<document.cookie.length;i++)
-        data+=document.cookie[i];
-    xhr.onreadystatechange=function()
+    if(Price === 0)
     {
-        if (xhr.readyState===4)
-        {
-            if(xhr.response === "true") {
-                alert("结算成功");
-                window.location.href="index.html"
-            }
-            else
-                alert("结算失败");
-        }
+        alert("空购物车！无法结算");
     }
-    xhr.open("POST",url+"?"+data,true);
-    xhr.send();
+    else {
+        let xhr = new XMLHttpRequest();
+        let url = "http://127.0.0.1:8086/user/pay";
+        let data = "account=";
+        for (let i = 5; i < document.cookie.length; i++)
+            data += document.cookie[i];
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.response === "true") {
+                    alert("结算成功");
+                    window.location.href = "index.html"
+                } else
+                    alert("结算失败");
+            }
+        }
+        xhr.open("POST", url + "?" + data, true);
+        xhr.send();
+    }
 }
 
 function showCart(array)
@@ -72,6 +76,7 @@ function showCart(array)
             totalPrice+=price[i]*parseInt(array[2*i+1]);
         }
     }
+    Price = totalPrice;
     document.getElementById("price").innerHTML = "总计："+totalPrice+"元";
 }
 

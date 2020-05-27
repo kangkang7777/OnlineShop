@@ -5,7 +5,7 @@
 
 .cart-container {
     background-color: gainsboro;
-    height: 700px;
+    height: 650px;
     width: 80%;
     border: 5px solid darkgray;
     border-radius: 25px;
@@ -17,7 +17,7 @@
 .goods-container
 {
     background-color: whitesmoke;
-    height: 60px;
+    height: 55px;
     width: 85%;
     border: 2px solid darkgray;
     border-radius: 15px;

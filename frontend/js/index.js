@@ -4,13 +4,13 @@ logoff.addEventListener('click',function(){
 delCookie();
 },false)
 
-document.getElementById("goods-1").addEventListener('click',function(){addCart(1);},false)
-document.getElementById("goods-2").addEventListener('click',function(){addCart(2);},false)
-document.getElementById("goods-3").addEventListener('click',function(){addCart(3);},false)
-document.getElementById("goods-4").addEventListener('click',function(){addCart(4);},false)
-document.getElementById("goods-5").addEventListener('click',function(){addCart(5);},false)
-document.getElementById("goods-6").addEventListener('click',function(){addCart(6);},false)
-document.getElementById("goods-7").addEventListener('click',function(){addCart(7);},false)
+document.getElementById("goods-1").addEventListener('click',function(){addCart(0);},false)
+document.getElementById("goods-2").addEventListener('click',function(){addCart(1);},false)
+document.getElementById("goods-3").addEventListener('click',function(){addCart(2);},false)
+document.getElementById("goods-4").addEventListener('click',function(){addCart(3);},false)
+document.getElementById("goods-5").addEventListener('click',function(){addCart(4);},false)
+document.getElementById("goods-6").addEventListener('click',function(){addCart(5);},false)
+document.getElementById("goods-7").addEventListener('click',function(){addCart(6);},false)
 
 
 

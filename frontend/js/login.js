@@ -30,6 +30,7 @@ function postResister(data)
                 }
                 setCookie(account);
                 alert("注册成功");
+                window.location.href = "index.html";
             }
             else
                 alert("注册失败");
